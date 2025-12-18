@@ -22,11 +22,11 @@ def type_clipboard():
     if not text:
         return
 
-    # allow F8 to fully release
+    
     time.sleep(0.15)
 
     for char in text:
-        # ✅ STOP is checked HERE (guaranteed)
+        
         if keyboard.is_pressed('f9'):
             print("Typing stopped.")
             break
@@ -40,3 +40,4 @@ def type_clipboard():
 keyboard.add_hotkey('f8', type_clipboard)
 
 keyboard.wait()
+
